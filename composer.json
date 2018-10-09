@@ -1,0 +1,19 @@
+{
+    "name": "string-exchange/string-exchange-php",
+    "description": "PHP implementation of String.exchange public API",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Liang Shi",
+            "email": "jeremy.shi@blockchaintech.net.au"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "StringExchange\\": "lib/"
+        }
+    }
+}
