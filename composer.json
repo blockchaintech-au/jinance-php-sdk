@@ -1,6 +1,7 @@
 {
     "name": "string-exchange/string-exchange-php",
     "description": "PHP implementation of String.exchange public API",
+    "home": "https://github.com/blockchaintech-au/string-exchange-php-sdk",
     "license": "MIT",
     "authors": [
         {
