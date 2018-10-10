@@ -12,7 +12,7 @@ class StringExchange
 {
     private $key;     // API key
     private $secret;  // API secret
-    private $url = "https://public-api-service.staging.string.exchange/api/v1/";     // API base URL
+    private $url = "https://api.string.exchange/api/v1/";     // API base URL
     private $client;    // http request
 
     function __construct(string $key = "", string $secret = "")
