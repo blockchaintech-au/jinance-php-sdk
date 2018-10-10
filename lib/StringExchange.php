@@ -31,12 +31,12 @@ class StringExchange
 
     public function tickers()
     {
-        return json_decode($this->query_public("ticker/24hr"), true);
+        return $this->query_public("ticker/24hr");
     }
 
     public function orderbook(string $symbol = 'BTC/AUD', $limit = 10)
     {
-        return json_decode($this->query_public("depth", compact('symbol', 'limit')), true);
+        return $this->query_public("depth", compact('symbol', 'limit'));
     }
 
     public function balance()
@@ -71,7 +71,7 @@ class StringExchange
             'order',
             ['orderUuid' => $orderId]
         );
-        return ["result" => $result];
+        return ["result" => "OK"];
     }
 
 
@@ -110,7 +110,7 @@ class StringExchange
             $url .= "?".http_build_query($parameters);
         }
         $response = $this->client->request($verb, $url);
-        return $response->getBody()->getContents();
+        return json_decode($response->getBody()->getContents(), true);
     }
 
     private function post(string $httpMethod, string $method, array $apiParams = [])
