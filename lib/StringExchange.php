@@ -128,7 +128,7 @@ class StringExchange
         $response = $this->client->request(
             $httpMethod,
             "{$this->url}{$method}?{$requestString}&signature={$hash}",
-            ["headers" => ['X-CEX-APIKEY' => $this->key]]
+            ["headers" => ['X-STRING-APIKEY' => $this->key]]
         );
         return $response->getBody()->getContents();
     }
