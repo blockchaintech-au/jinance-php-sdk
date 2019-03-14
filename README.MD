@@ -1,4 +1,4 @@
-# PHP library for String.exchange public API
+# [WIP]PHP library for String.exchange public API
 With the PHP library, you can easily trade in String.exchange
 
 ## Getting Start
