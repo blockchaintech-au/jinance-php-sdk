@@ -1,18 +1,18 @@
 <?php
 
-namespace StringExchange;
+namespace Jinance;
 
 use GuzzleHttp\Psr7;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Uri;
 
-class StringExchangeAPIException extends \ErrorException {};
+class JinanceAPIException extends \ErrorException {};
 
-class StringExchange
+class Jinance
 {
     private $key;     // API key
     private $secret;  // API secret
-    private $url = "https://api.string.exchange/api/v1/";     // API base URL
+    private $url = "https://api.jinance.com.au/api/v1/";     // API base URL
     private $client;    // http request
 
     function __construct(string $key = "", string $secret = "")

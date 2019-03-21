@@ -1,8 +1,8 @@
-# PHP library for String.exchange public API
-With the PHP library, you can easily trade in String.exchange
+# PHP library for Jinance.com.au public API
+With the PHP library, you can easily trade at Jinance.com.au
 
 ## Getting Start
-First you need to sign up for the [String.exchange](http://string.exchange) API. You will need to pass KYC, otherwise some APIs are not supported.
+First you need to sign up for the [Jinance](https://jinance.com.au) API. You will need to pass KYC, otherwise some APIs are not supported.
 
 ## Installation
 To install in your project

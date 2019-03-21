@@ -1,7 +1,7 @@
 {
-    "name": "string-exchange/string-exchange-php",
-    "description": "PHP implementation of String.exchange public API",
-    "home": "https://github.com/blockchaintech-au/string-exchange-php-sdk",
+    "name": "jinance/jinance-php",
+    "description": "PHP implementation of Jinance public API",
+    "home": "https://github.com/blockchaintech-au/jinance-php-sdk",
     "license": "MIT",
     "authors": [
         {
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "StringExchange\\": "lib/"
+            "Jinance\\": "lib/"
         }
     }
 }

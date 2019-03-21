@@ -2,33 +2,33 @@
 
 require_once 'vendor/autoload.php';
 
-use StringExchange\StringExchange;
+use Jinance\Jinance;
 
-$stringExchange = new StringExchange();
+$jinance = new Jinance();
 
 // get ticker of default symbol "BTC/AUD"
-$res = $stringExchange->ticker();
+$res = $jinance->ticker();
 
-// get ticker of given symbol
-$res = $stringExchange->ticker('ETH/AUD');
+// // get ticker of given symbol
+$res = $jinance->ticker('ETH/AUD');
 
-// get ticker of all symbols
-$res = $stringExchange->tickers();
+// // get ticker of all symbols
+$res = $jinance->tickers();
 
-// get orderbook of "BTC/AUD" with limit of 10
-$res = $stringExchange->orderbook();
+// // get orderbook of "BTC/AUD" with limit of 10
+$res = $jinance->orderbook();
 
-// get orderbook of "ETH/AUD" with limit of 100
-$res = $stringExchange->orderbook('ETH/AUD', 100);
+// // get orderbook of "ETH/AUD" with limit of 100
+$res = $jinance->orderbook('ETH/AUD', 100);
 
 
 $api_key = "";
 $api_secrect = "";
 
-$stringExchange = new StringExchange($api_key, $api_secrect);
+$jinance = new Jinance($api_key, $api_secrect);
 
-// get account balance
-$res = $stringExchange->balance();
+// // get account balance
+$res = $jinance->balance();
 
 
 $order = [
@@ -38,31 +38,31 @@ $order = [
     'type'   => 'limit'
 ];
 
-// send a sell order
-$res = $stringExchange->sell($order);
+// // send a sell order
+$res = $jinance->sell($order);
 
-// send a buy order
-$res = $stringExchange->buy($order);
+// // send a buy order
+$res = $jinance->buy($order);
 
 
-$orderId = 'd0822e38-4ae2-40e1-b731-cc783ea7f060';
+// $orderId = 'd0822e38-4ae2-40e1-b731-cc783ea7f060';
 // cancel an order, pass the order uuid
-// $res = $stringExchange->cancel($orderId);
+// $res = $jinance->cancel($orderId);
 
-$orderId = '943585b8-8283-4971-96da-0da6a7271bdf';
-// $res = $stringExchange->order($orderId);
+// $orderId = '943585b8-8283-4971-96da-0da6a7271bdf';
+// $res = $jinance->order($orderId);
 
-// get open orders from all symbols with default limit 20
-$res = $stringExchange->openOrders();
+// // get open orders from all symbols with default limit 20
+$res = $jinance->openOrders();
 
-// get open orders from "ETH/AUD" with limit 100
-$res = $stringExchange->openOrders('ETH/AUD', 100);
+// // get open orders from "ETH/AUD" with limit 100
+$res = $jinance->openOrders('ETH/AUD', 100);
 
-// get my trades from "BTC/AUD" with default limit 20
-$res = $stringExchange->myTrades();
+// // get my trades from "BTC/AUD" with default limit 20
+$res = $jinance->myTrades();
 
-// get my trades from "ETH/AUD" with limit 100
-$res = $stringExchange->myTrades('BTC/AUD', 1);
+// // get my trades from "ETH/AUD" with limit 100
+// $res = $jinance->myTrades('BTC/AUD', 1);
 
 printf(json_encode($res));
 
