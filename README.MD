@@ -8,7 +8,7 @@ First you need to sign up for the [Jinance](https://jinance.com.au) API. You wil
 To install in your project
 
 ```json
-composer require string-exchange/string-exchange-php
+composer require jinance/jinance-php
 ```
 ### Usage
 
@@ -17,20 +17,20 @@ composer require string-exchange/string-exchange-php
 <?php
 require_once 'vendor/autoload.php';
 
-use StringExchange\StringExchange;
+use Jinance\Jinance;
 
-$stringExchange = new StringExchange();
+$jinance = new Jinance();
 
 // get ticker of default symbol "BTC/AUD"
-$res = $stringExchange->ticker();
+$res = $jinance->ticker();
 
 $api_key = "";
 $api_secrect = "";
 
-$stringExchange = new StringExchange($api_key, $api_secrect);
+$jinance = new Jinance($api_key, $api_secrect);
 
 // get account balance
-$res = $stringExchange->balance();
+$res = $jinance->balance();
 
 ```
 see more examples and all supported endpoints in example.php
